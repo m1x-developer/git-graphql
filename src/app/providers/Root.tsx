@@ -1,9 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
+import { RouterProvider } from "~app/providers/RouterProvider.tsx";
+import { Apollo } from "~app/providers/ApolloProvider.tsx";
 
 export const Root = () => {
   return (
-    <BrowserRouter>
-      <div>123</div>
-    </BrowserRouter>
+    <Apollo>
+      <BrowserRouter>
+        <RouterProvider />
+      </BrowserRouter>
+    </Apollo>
   );
 };

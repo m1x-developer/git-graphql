@@ -43,6 +43,7 @@
       "~shared/*": ["./shared/*"]
     }
   },
+  "types": ["vite/client"],
   "include": ["src", "types"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

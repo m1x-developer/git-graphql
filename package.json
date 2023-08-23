@@ -1,38 +1,19 @@
 {
-  "name": "template-vite-react-ts-fsd",
+  "name": "test",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "generate:api": "npx swagger-typescript-api -p ./swagger.json -o ./src/shared/api/realworld -n Api.ts --type-suffix Dto",
-    "lint": "eslint src --ext ts,tsx --cache --report-unused-disable-directives --max-warnings 0",
-    "lint:perf": "set TIMING=1 && eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "prettier": "pretty-quick --ignore-path .gitignore",
-    "prettier:all": "prettier --write . --ignore-path .gitignore",
-    "test:watch": "vitest watch",
-    "test:run": "vitest run",
-    "test:coverage": "vitest run --coverage",
-    "coverage:open": "npx vite preview --outDir ./coverage",
-    "test:coverage:open": "yarn run test:coverage && yarn run coverage:open",
-    "dep-cruiser:preview": "npx depcruise src --include-only \"^src\" --output-type dot | dot -T svg > dependency-graph-preview.svg"
+    "build": "tsc && vite build"
   },
   "dependencies": {
-    "@tanstack/react-query": "^4.29.11",
-    "@tanstack/react-query-devtools": "^4.29.11",
-    "classnames": "^2.3.2",
-    "dayjs": "^1.11.7",
-    "formik": "^2.4.0",
+    "@apollo/client": "^3.8.1",
+    "graphql": "^16.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-error-boundary": "^4.0.10",
-    "react-icons": "^4.9.0",
     "react-query": "^3.39.3",
-    "react-router-dom": "^6.11.2",
-    "yup": "^1.2.0",
-    "zustand": "^4.3.8"
+    "react-router-dom": "^6.11.2"
   },
   "devDependencies": {
     "@mswjs/data": "^0.13.0",
@@ -67,6 +48,7 @@
     "unplugin-fonts": "^1.0.3",
     "vite": "^4.3.2",
     "vite-plugin-checker": "^0.6.0",
+    "vite-plugin-env-compatible": "^1.1.1",
     "vite-plugin-eslint": "^1.8.1",
     "vitest": "^0.32.0"
   }
